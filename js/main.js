@@ -203,3 +203,89 @@ function all(){
    box_1.display = "none";    
 }
 
+
+
+function validateForm(){
+	var value1=document.getElementById("name").value;
+	var value2=document.getElementById("email").value;
+	var value3=document.getElementById("pwd").value;
+	var value4=document.getElementById("description").value;
+
+	if (value1 == "") {
+		document.getElementById("error1").innerHTML="please fill the field";
+		return false;
+	}
+
+	// if (isNan(value1)) {
+	// 	document.getElementById("error1").innerHTML="number not allowd";
+	// 	return false;
+	// }
+
+	if (value1.length<="2") {
+		document.getElementById("error1").innerHTML="minimum character length is 2";
+		return false;
+	}
+
+	if (value2 == "") {
+		document.getElementById("error2").innerHTML="please fill the field";
+		return false;
+	}
+
+	if(value2.replace(/\s/g,"").length<=0){
+        document.getElementById("error2").innerHTML="** White Space Are Not Allowed";
+        return false;
+    }
+
+	if (value2<="2" && value2>="30") {
+		document.getElementById("error2").innerHTML="Length Shoud be beetween 3 and 30 ";
+		return false;
+	}
+
+	if (value2.indexOf('@') <=0) {
+		document.getElementById("error2").innerHTML="emailid is not Ok ";
+		return false;
+	}
+    
+     if((value2.charAt(value2.length-4)!='.') && (value2.charAt(value2.length-3)!='.')){
+        document.getElementById("error2").innerHTML="dot is not available";
+        return false;
+    }
+
+    if (value3 == "") {
+    	document.getElementById("error3").innerHTML ="please fill the field";
+    	return false;
+    }
+
+    if (value3.length<="8" && value3.length>="15") {
+    	document.getElementById("error3").innerHTML ="character should be 8 to 15";
+    	return false;
+    }
+
+    if (value4 == "") {
+    	document.getElementById("error4").innerHTML ="please fill the field";
+    	return false;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
