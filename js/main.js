@@ -267,21 +267,106 @@ function validateForm(){
     }
 }
 
+function loginshow(){
+	var pre = document.querySelector(".login-modal").style;
+
+	if (pre.display=="block") {
+		pre.display = "none";
+		pre.width = "0%";
+	}
+	else{
+		pre.display = "block";
+		pre.width = "100%";
+	}
+}
+
+function hide(){
+	var pre1 = document.querySelector(".login-modal").style;
+
+	if (pre1.display=="block") {
+		pre1.display = "none";
+		pre1.width = "0%";
+	}
+	else{
+		pre1.display = "block";
+		pre1.width = "100%";
+	}
+	
+}
 
 
+var lg_error = document.getElementById("login-error");
+var patten = /\s/g;
+var patten1 = "@";
+
+ 
+function first(){
+	var p = document.getElementById("email1").value;
+
+	if (p == "") {
+        lg_error.innerHTML="please fill the field";
+        return false;
+	}
+
+	if (p.match(patten)) {
+		lg_error.innerHTML ="white space is not allowd";
+		return false;
+	}
+
+    if (p.indexOf("@")<=0) {
+    	lg_error.innerHTML = "Email id is not Ok";
+    	return false;
+    }
+
+    if (p.length<="2" || p.length>="25") {
+    	lg_error.innerHTML ="character should be beetween 3 to 25";
+    	return false;
+    }
+
+    if ((p.charAt(p.length-4) !=".") && (p.charAt(p.length-3) !=".")){
+    	lg_error.innerHTML="Email Id is not valid";
+    	return false;
+    }
+
+    lg_error.innerHTML ="";
+	return true;
+}
+
+function last(){
+	var s = document.getElementById("pwd1").value;
+	var special = /^[A-Za-z]\w{7,14}$/
 
 
+	if (s =="") {
+		lg_error.innerHTML ="please fill the field";
+		return false;
+	}
 
+	if (s.match(patten)) {
+		lg_error.innerHTML = "white space is not allowed";
+		return false;
+	}
 
+	if (s.length<=8 ){
+		lg_error.innerHTML = "please write at least 8 character";
+		return false;
+	}
 
+	if (s.match(special)) {
+		lg_error.innerHTML = "write at least 8 character, 1 numeric, 1 uppercase, 1 lowercase and 1 special character";
+		return false;
+	}
 
+	lg_error.innerHTML ="";
+	return true;
+}
 
-
-
-
-
-
-
+function validate(){
+	if (!first() || !last()) {
+		lg_error.innerHTML = "please fill all the details";
+		return false;
+	}
+}
 
 
 

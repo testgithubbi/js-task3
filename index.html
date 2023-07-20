@@ -45,7 +45,7 @@
 										</select>
 									</div>
 							    </li>
-							    <li><a href="#" class="login-btn"> login</a></li>
+							    <li><a class="login-btn" onclick="loginshow()"> login</a></li>
 							</ul>
 						</div>
 					</div>
@@ -294,7 +294,7 @@
                 <div class="col-lg-6 col-md-12 col-12 set-contact">
                     <h2>Get in touch</h2>
                     <form class="form1 row" onsubmit="return validateForm()">                       
-                         <div class="col-lg-6">
+                        <div class="col-lg-6">
                             <div class="part-1">
                                 <input type="text" placeholder="Name" name="name" id="name">
                                 <div id="error1"></div>
@@ -329,6 +329,34 @@
                 
             </div>
     	</div>
+    </div>
+
+    <div class="login-modal">
+    	<div class="set-contact">
+            <h2>login</h2>
+            <div class="close-icon" onclick="hide()"><i class="fa-solid fa-xmark"></i></div>
+            <form class="form1 row"> 
+                <div class="col-lg-12">
+                    <div class="part-1">
+                        <input type="text" placeholder="Email" id="email1" onkeyup="first()">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="part-1">
+                        <input type="Password" placeholder="Password" id="pwd1" onkeyup="last()">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <error id="login-error"></error>
+                    
+                </div>
+                <div class="col-lg-12">
+                    <div class="sub1">
+                        <input type="submit" value="Submit" onclick="return validate()">
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
      
 
