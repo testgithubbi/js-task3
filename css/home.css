@@ -199,10 +199,10 @@ button:focus{
 	border: unset;
 }
 .banner-slider button#prev{
-	left: 2%;
+	left: 15%;
 }
 .banner-slider button#next{
-	right: 2%;
+	right: 15%;
 }
 .co_tab {
     padding: 100px 0px;
