@@ -367,7 +367,7 @@ button:focus{
     height: 100%;
     background: rgb(0 0 0 / 40%);
     width: 0;
-    transition: width 0.5s ease;	
+    animation: move 0.5s ease;	
 }
 .login-modal .set-contact {
     padding: 40px 30px!important;
@@ -375,6 +375,15 @@ button:focus{
     width: 400px;
     background: #fff;
     margin-left: auto;
+}
+@keyframes move{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+
 }
 .set-contact h2{
 	font-size: 30px;
@@ -408,6 +417,55 @@ button:focus{
     top: 17px;
     right: 16px;
     cursor: pointer;
+}
+.co_mouse{
+    padding: 100px 0px;
+}
+.co_main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.button-main{
+    width: 30%;
+    padding-right: 50px;
+}
+.button-main button {
+    width: 100%;
+    border: unset;
+    margin-bottom: 7px;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.about-main{
+    width: 70%;
+    position: relative;
+}
+.about {
+    padding: 30px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 33px;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 3px 4px 7px -6px rgb(0 0 0 / 60%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: none;
+}
+.about:first-child{
+    color: #2690bf;
+}
+.about:nth-child(2){
+    color: red;
+}
+.about:last-child{
+    color: green;
 }
 
 

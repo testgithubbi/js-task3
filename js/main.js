@@ -368,6 +368,58 @@ function validate(){
 	}
 }
 
+var mouse = document.querySelector(".about1").style;
+var mouse1 = document.querySelector(".about2").style;
+var mouse2 = document.querySelector(".about3").style;
+
+function story(){
+	if(mouse.display =="block"){
+          mouse.display = "none";
+          mouse1.display = "block";
+          mouse2.display = "block";
+	}
+}
+
+// function story1(){
+// 	if(mouse.display =="block"){
+//           mouse.display = "none";
+//           mouse1.display = "block";
+//           mouse2.display = "block";
+// 	}
+// }
+
+function mission(){
+	if(mouse1.display =="none"){
+          mouse1.display = "block";
+           mouse.display= "none";
+          mouse2.display = "none";
+	}
+}
+
+// function mission1(){
+// 	if(mouse1.display =="block"){
+//           mouse1.display = "none";
+//           mouse.display = "block";
+//           mouse2.display = "block";
+// 	}
+// }
+
+// function vision(){
+// 	if(mouse2.style =="none"){
+//           mouse2.style = block;
+//           mouse.style = block;
+//           mouse1.style = block;
+// 	}
+// }
+
+// function vision1(){
+// 	if(mouse2.style =="block"){
+//           mouse2.style = none;
+//           mouse.style = block;
+//           mouse1.style = block;
+// 	}
+// }
+
 
 
 
